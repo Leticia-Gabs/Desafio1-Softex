@@ -71,6 +71,17 @@ switch(escolhaproduto){
 let menu = readline.question("Vc deseja comprar?")
 if (menu == "nao"){
     break
-    console.log("Compra finalizada com sucesso! Seu total é de: " + carrinho)
+   
+    console.log("\nCompra finalizada com sucesso!");
 }
 }
+
+console.log("_________ RESUMO DA COMPRA _________");
+
+for (let i = 0; i < carrinho.length; i++) {
+    let item = carrinho[i];
+    let valorTotalItem = item.qtd * item.preco;
+    console.log(item.produto + " - Quantidade: " + item.qtd + " - Valor total: R$ " + valorTotalItem);
+}
+
+console.log("\nTotal a pagar: R$ " + totalCompra);
